@@ -1,5 +1,8 @@
 require 'rack/lobster'
 
+STDERR.puts 'error'
+STDOUT.puts 'Hello'
+
 map '/health' do
   health = proc do |env|
     [200, { "Content-Type" => "text/html" }, ["1"]]
